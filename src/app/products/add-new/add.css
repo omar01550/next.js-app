@@ -1,0 +1,48 @@
+/* styles.css */
+
+.add-product-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.add-product-page h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.add-product-page form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.add-product-page div {
+    margin-bottom: 10px;
+}
+
+.add-product-page label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.add-product-page input[type="text"],
+.add-product-page select,
+.add-product-page textarea,
+.add-product-page input[type="file"] {
+    width: 300px;
+    padding: 5px;
+}
+
+.add-product-page button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.add-product-page button:hover {
+    background-color: #0056b3;
+}
