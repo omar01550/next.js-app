@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-"use client";
-=======
 "use client"
->>>>>>> 9be80c4ce3387baf69680233c8789d33234314e8
 
 
 import { useEffect, useState } from 'react'
