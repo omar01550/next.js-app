@@ -16,7 +16,7 @@ export default function SearchBar({ visibility }) {
 
 
     React.useEffect(() => {
-        fetch("http://localhost:3000/api/products/get-title").then((result) => {
+        fetch("https://next-js-app-1x8d.vercel.app/api/products/get-title").then((result) => {
             return result.json()
         }).then((result) => {
             setTitles(result)
