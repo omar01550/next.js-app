@@ -20,7 +20,7 @@ const Products = async () => {
     try {
         // await Connect();
         // const data = await productModel.find();
-        const res = await fetch("http://localhost:3000/api/products", {
+        const res = await fetch("https://next-js-app-1x8d.vercel.app/api/products", {
             cache: "no-store"
         })
         const data = await res.json();
