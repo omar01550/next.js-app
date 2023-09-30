@@ -16,7 +16,7 @@ const Gallery = () => {
 
 
     useEffect(() => {
-        fetch("http://localhost:3000/api/products/get-images")
+        fetch("https://next-js-app-1x8d.vercel.app/api/products/get-images")
             .then((res) => {
                 return res.json()
             }).then((images) => {
