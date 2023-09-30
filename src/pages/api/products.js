@@ -12,12 +12,11 @@ const handler = async (req, res) => {
     const { limit, name, id } = req.query;
 
 
-    await Connect()
-    try {
 
+    try {
+        await Connect()
 
         const result = await ProductModel.find().limit(limit);
-
 
         res.status(200).json({ products: result })
     } catch (error) {

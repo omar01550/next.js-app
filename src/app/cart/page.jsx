@@ -147,10 +147,6 @@ const Cart = () => {
                             <span>Total cost</span>
                             <span>${() => {
                                 let totalCost = 0;
-                                for (let i = 0; i < cart.length; i++) {
-                                    totalCost += cart[i].cost;
-
-                                }
                                 return totalCost;
                             }}</span>
                         </div>

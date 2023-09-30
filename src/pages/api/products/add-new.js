@@ -8,12 +8,13 @@ export default async function handler(req, res) {
 
 
 
-    Connect()
+
 
     const { title, describtion, image, smallImages, category, sizes, price, type, token } = req.query;
 
 
     try {
+        await Connect()
         const addProduct = new productModel({
             title,
             describtion,

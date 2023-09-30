@@ -1,5 +1,10 @@
 "use client"
 import React from 'react';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LogoImage from '../../../images/logo.png';
+import Image from 'next/image';
 
 import "./footer.css";
 
@@ -13,8 +18,8 @@ const Footer = () => {
                             <div class="single-cta">
                                 <i class="fas fa-map-marker-alt"></i>
                                 <div class="cta-text">
-                                    <h4>Find us</h4>
-                                    <span>Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016 </span>
+                                    <h4>ecommerce-next-app</h4>
+
                                 </div>
                             </div>
                         </div>
@@ -23,7 +28,7 @@ const Footer = () => {
                                 <i class="fas fa-phone"></i>
                                 <div class="cta-text">
                                     <h4>Call us</h4>
-                                    <span>+91 1234567890</span>
+                                    <span>+20 1550180558</span>
                                 </div>
                             </div>
                         </div>
@@ -32,7 +37,7 @@ const Footer = () => {
                                 <i class="far fa-envelope-open"></i>
                                 <div class="cta-text">
                                     <h4>Mail us</h4>
-                                    <span>contact@gmail.com</span>
+                                    <span>arom57818@gmail.com</span>
                                 </div>
                             </div>
                         </div>
@@ -43,7 +48,7 @@ const Footer = () => {
                         <div class="col-xl-4 col-lg-4 mb-50">
                             <div class="footer-widget">
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="assets/images/logo.png" class="img-fluid" alt="logo" /></a>
+                                    <a href="index.html"><Image src={LogoImage} class="img-fluid" alt="logo" /></a>
                                 </div>
                                 <div class="footer-text">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
@@ -51,15 +56,20 @@ const Footer = () => {
                                 <div class="footer-social-icon">
                                     <span>Follow us</span>
                                     <ul class="social_icon">
-                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                                        <li><a><FacebookIcon /></a></li>
+                                        <li><a href="#">
+                                            <GitHubIcon />
+                                        </a></li>
+                                        <li><a href="#">
+
+                                            <InstagramIcon />
+                                        </a></li>
+
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        {/* <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                             <div class="footer-widget">
                                 <div class="footer-widget-heading">
                                     <h3>Useful Links</h3>
@@ -76,15 +86,15 @@ const Footer = () => {
                                     <li><a href="#">Contact us</a></li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> */}
                         <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
                             <div class="footer-widget">
-                                <div class="footer-widget-heading">
+                                {/* <div class="footer-widget-heading">
                                     <h3>Subscribe</h3>
                                 </div>
                                 <div class="footer-text mb-25">
                                     <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
-                                </div>
+                                </div> */}
                                 <div class="subscribe-form">
                                     <form action="#">
                                         <input type="text" placeholder="Email Address" />
@@ -118,7 +128,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div> */}
-        </footer>
+        </footer >
     )
 }
 

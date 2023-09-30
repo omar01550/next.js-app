@@ -24,7 +24,7 @@ export default function SearchBar({ visibility }) {
             .catch((err) => {
 
             });
-    })
+    }, [])
 
     return (
         <Stack spacing={2} className="w-[350px]" sx={{

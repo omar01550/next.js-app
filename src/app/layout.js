@@ -1,4 +1,4 @@
-
+"use client";
 
 
 import { useEffect, useState } from 'react'
@@ -32,20 +32,23 @@ export default function RootLayout({ children }) {
   const [cart, setCart] = useState([])
 
 
+  useEffect(() => {
+    setCart(window.localStorage.products && JSON.parse(window.localStorage.products))
+  }, [])
+
+
+
+
 
 
 
 
   useEffect(() => {
 
-    window.localStorage.setItem("products", JSON.stringify(cart))
+    window.localStorage.products = JSON.stringify(cart)
 
   }, [cart])
 
-
-  useEffect(() => {
-    setCart(JSON.parse(window.localStorage.getItem("products")))
-  }, [])
 
   return (
     <html lang="en">
