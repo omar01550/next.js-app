@@ -14,15 +14,17 @@ const handler = async (req, res) => {
 
 
     try {
-        await Connect()
+        await Connect();
+        console.log('db connected in products');
 
         const result = await ProductModel.find().limit(limit);
-
+        console.log(result);
         res.status(200).json({ products: result })
     } catch (error) {
 
         res.status(400).json({
-            message: "error"
+            message: "failed to get products ",
+            error
         })
     }
 };

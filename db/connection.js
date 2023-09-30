@@ -1,11 +1,13 @@
 import mongoose from "mongoose";
 
 
+const url = "mongodb+srv://Omar01550:FDy1cRy0R66uKJhR@cluster0.h9ep7ah.mongodb.net/";
+
 export default async function Connect() {
-    mongoose.connect('mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1')
+    mongoose.connect(url)
         .then((res) => {
-            console.log('res');
+            console.log('db connected');
         }).catch((err) => {
-            console.log(err);
+            console.log("failed to connect with db");
         });
 }
