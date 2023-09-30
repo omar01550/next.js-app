@@ -2,7 +2,7 @@
 
 import Connect from "../../../db/connection.js";
 import ProductModel from "../../../db/models/product.js";
-import UserModle from "../../../db/models/product.js";
+
 
 
 const handler = async (req, res) => {
