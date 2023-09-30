@@ -16,7 +16,7 @@ const Section = () => {
     const getData = async () => {
         setLoading(true)
         try {
-            const res = await fetch("http://localhost:3000/api/products?limit=8")
+            const res = await fetch("https://next-js-app-1x8d.vercel.app/api/products?limit=8")
             res.json()
                 .then((r) => {
 
