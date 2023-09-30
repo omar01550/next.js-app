@@ -21,7 +21,7 @@ const SearchPage = async (params) => {
     metadata.title = "search for " + params.searchParams.word
 
     try {
-        const res = await fetch("http://localhost:3000/api/search?title=" + params.searchParams.word, {
+        const res = await fetch("https://next-js-app-1x8d.vercel.app/api/search?title=" + params.searchParams.word, {
             cache: "no-store"
         });
         const result = await res.json();
