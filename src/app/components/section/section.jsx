@@ -20,21 +20,24 @@ const Section = () => {
             res.json()
                 .then((r) => {
 
-
-
-                    setProducts(r.products);
+                   setProducts(r.products);
                     setLoading(false);
+                    console.log(r);
+                
+         })
 
-                })
-
-                .catch(() => {
+                .catch((error) => {
                     setError(true)
+                    console.log(error);
                 })
 
 
         } catch (error) {
 
             setError(true)
+            console.log(error)
+            console.log("error in gallery");
+            
         }
 
     }
@@ -67,7 +70,7 @@ const Section = () => {
                                     description={ele.describtion}
                                     price={ele.price}
                                     category={ele.category}
-                                    smallImages={ele.smallImages}
+                    
 
 
 
