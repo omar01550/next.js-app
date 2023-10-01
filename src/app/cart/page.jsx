@@ -13,20 +13,16 @@ const Cart = () => {
     let totalCost = 0;
     return (
         <div class="container mx-auto mt-10">
-            <div class="flex shadow-md my-10">
-                <div class="w-3/4 bg-white px-10 py-10">
-                    {cart.map((ele) => {
-                        return (
+            <div className="flex shadow-md my-10 flex-wrap">
+                <div class="bg-white px-10 py-10 sm:w-[100%] md:w-[70%]">
 
-                            <div class="flex mt-10 mb-5" id={ele._id}>
-                                <h3 class="font-semibold text-gray-600 text-xs uppercase w-2/5">Product Details</h3>
-                                <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Quantity</h3>
-                                <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Price</h3>
-                                <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Total</h3>
-                            </div>
+                    <div class="flex mt-10 mb-5" >
+                        <h3 class="font-semibold text-gray-600 text-xs uppercase w-2/5">Product Details</h3>
+                        <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Quantity</h3>
+                        <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Price</h3>
+                        <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Total</h3>
+                    </div>
 
-                        )
-                    })}
                     {
                         cart.map(ele => {
 
@@ -47,7 +43,7 @@ const Cart = () => {
                                     <div class="flex justify-center w-1/5">
                                         <svg class="fill-current text-gray-600 w-3" viewBox="0 0 448 512" onClick={() => {
                                             // decrement
-                                            if (cart.filter(item => item.id == ele.id)[0].count > 0) {
+                                            if (cart.filter(item => item.id == ele.id)[0].count > 1) {
                                                 setCart([...cart.filter(item => item.id != ele.id), { ...cart.filter(item => item.id == ele.id)[0], count: cart.filter(item => item.id == ele.id)[0].count - 1 }]);
                                             }
                                         }}><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
@@ -62,7 +58,7 @@ const Cart = () => {
                                         </svg>
                                     </div>
                                     <span class="text-center w-1/5 font-semibold text-sm">${ele.price}</span>
-                                    <span class="text-center w-1/5 font-semibold text-sm">${ }</span>
+                                    <span class="text-center w-1/5 font-semibold text-sm">${ele.price * ele.count}</span>
                                 </div>
                             )
                         })
@@ -125,7 +121,7 @@ const Cart = () => {
                     </a>
                 </div>
 
-                <div id="summary" class="w-1/4 px-8 py-10">
+                <div id="summary" class="sm:w-[100%] md:w-[30%] px-8 py-10">
                     <h1 class="font-semibold text-2xl border-b pb-8">Order Summary</h1>
                     <div class="flex justify-between mt-10 mb-5">
                         <span class="font-semibold text-sm uppercase">Items {cart.length}</span>
