@@ -17,7 +17,7 @@ export default function CustomizedInputBase() {
             sx={{
                 p: '2px 4px',
                 display: {
-                    "sm": "none",
+                    "xs": "none",
                     "md": "flex"
                 },
                 alignItems: 'center', width: 400
@@ -27,7 +27,7 @@ export default function CustomizedInputBase() {
 
             <InputBase
                 sx={{ ml: 1, flex: 1 }}
-                placeholder="Search Google Maps"
+                placeholder="Search For Products"
                 inputProps={{ 'aria-label': 'search google maps' }}
                 onKeyUp={(e) => {
                     setSearchWord(e.target.value);
