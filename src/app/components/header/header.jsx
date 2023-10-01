@@ -27,7 +27,10 @@ const Header = ({ openSideBar, setOpenSideBar }) => {
                 }}
             /> */}
 
+<Link href="/" >
             <Image src={LogoImage} alt="adidas logo" className="w-[50px] h-[50px]" />
+
+</Link>
 
 
 
