@@ -37,7 +37,7 @@ const Card = ({ title, image, id, describtion, category, price }) => {
                 <img src={image ? image : "https://images.unsplash.com/photo-1651950537598-373e4358d320?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MjV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"} alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
             </Link>
             <div class="px-4 py-3 w-72">
-                <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
+                <span class="text-gray-400 mr-3 uppercase text-xs">{category}</span>
                 <p class="text-lg font-bold text-black truncate block capitalize">{title}</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">${price}</p>
