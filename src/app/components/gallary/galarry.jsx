@@ -22,7 +22,11 @@ const Gallery = () => {
             }).then((images) => {
                 setImages(images);
                 console.log(images);
+            }).catch((error) => {
+            
+            console.log(error)
             })
+            
     }, [])
 
 
