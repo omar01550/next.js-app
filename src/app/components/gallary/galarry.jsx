@@ -22,7 +22,7 @@ const Gallery = () => {
 
     useEffect(() => {
 
-        fetch("http://localhost:3000/api/products/get-images")
+        fetch("https://next-js-app-1x8d.vercel.app/api/products?limit=9")
             .then((res) => {
                 return res.json()
             }).then((images) => {
@@ -41,7 +41,7 @@ const Gallery = () => {
                 gallery
             </h1>
 
-            <div className='gallery w-[100%] bg-red-500'>
+            <div className='gallery w-[100%]'>
                 {
 
 
