@@ -51,7 +51,7 @@ const Header = ({ openSideBar, setOpenSideBar }) => {
                         md: "block"
                     }}
                 />
-                <SearchDialog />
+{/*                 <SearchDialog /> */}
 
                 {/* <Image src={UserIcon} alt="adidas logo" className="w-[30px] h-[30px]" /> */}
 
