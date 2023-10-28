@@ -1,4 +1,4 @@
-"use client";
+"use clien t";
 
 import React, { useContext } from 'react'
 import { CartContext } from '../layout'
