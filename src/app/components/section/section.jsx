@@ -6,6 +6,7 @@ import { Button, Container, Stack } from '@mui/material';
 import { Box } from "@mui/material";
 import { ArrowRightAlt } from '@mui/icons-material';
 import Loader from '../loader/loader';
+import ErrorComponent from '../errorComponent/error';
 
 const Section = () => {
 
@@ -14,35 +15,31 @@ const Section = () => {
     const [loading, setLoading] = useState(false)
 
     const getData = async () => {
-        setLoading(true)
         try {
             const res = await fetch("https://next-js-app-1x8d.vercel.app/api/products?limit=8")
             res.json()
                 .then((r) => {
 
-                   setProducts(r.products);
+                    setProducts(r.products);
                     setLoading(false);
-                    console.log(r);
-                
-         })
 
-                .catch((error) => {
+                })
+
+                .catch(() => {
                     setError(true)
-                    console.log(error);
                 })
 
 
         } catch (error) {
 
             setError(true)
-            console.log(error)
-            console.log("error in gallery");
-            
         }
 
     }
 
     useEffect(() => {
+        setLoading(true)
+
         getData();
 
 
@@ -60,25 +57,26 @@ const Section = () => {
 
             <div className='flex justify-around md:justify-between items-center flex-wrap'>
                 {
-                    products.length > 0
-                        ? products.map((ele) => {
-                            return (
-                                <Card
-                                    id={ele._id}
-                                    image={ele.image}
-                                    title={ele.title}
-                                    description={ele.describtion}
-                                    price={ele.price}
-                                    category={ele.category}
-                    
+                    error ? <ErrorComponent />
+                        : loading ? <Loader /> :
+                            products.map((ele) => {
+                                return (
+                                    <Card
+                                        id={ele._id}
+                                        image={ele.image}
+                                        title={ele.title}
+                                        description={ele.describtion}
+                                        price={ele.price}
+                                        category={ele.category}
+                                        smallImages={ele.smallImages}
 
 
 
 
-                                />
-                            )
-                        })
-                        : loading ? <Loader /> : error ? "error" : ""
+                                    />
+                                )
+                            })
+
                 }
             </div>
         </Container>
