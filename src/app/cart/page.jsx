@@ -10,7 +10,7 @@ const Cart = () => {
 
     const { cart, setCart } = useContext(CartContext)
 
-    let totalCost: number = 0;
+    let totalCost = 0;
     return (
         <div className="container mx-auto mt-10">
             <div className="flex shadow-md my-10 flex-wrap">
